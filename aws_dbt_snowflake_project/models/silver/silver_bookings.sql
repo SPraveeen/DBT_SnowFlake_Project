@@ -1,0 +1,19 @@
+{{
+    config
+(
+    materialized='incremental',
+    unique_key='booking_id'
+)
+}}
+
+select 
+BOOKING_ID,
+LISTING_ID,
+BOOKING_DATE,
+{{ multiply('NIGHTS_BOOKED','BOOKING_AMOUNT',2) }} 
+as total_amount,
+CLEANING_FEE,
+SERVICE_FEE,
+BOOKING_STATUS,
+CREATED_AT 
+from {{ref('bronze_bookings')}}

@@ -1,10 +1,4 @@
-{{
-    config
-(
-    materialized='incremental',
-    unique_key='booking_id'
-)
-}}
+{{config(materialized='incremental',unique_key='booking_id')}}
 
 select 
 BOOKING_ID,

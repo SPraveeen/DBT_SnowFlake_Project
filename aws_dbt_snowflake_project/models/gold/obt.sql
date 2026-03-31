@@ -1,7 +1,7 @@
 {% set configs =[
     {
         'table':'AIRBNB.silver.silver_BOOKINGS',
-        'columns':'*',
+        'columns':'silver_bookings.*',
         'alias':'silver_bookings'
     },
     {

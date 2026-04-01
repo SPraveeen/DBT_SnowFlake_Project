@@ -5,6 +5,8 @@ build/
 dist/
 wheels/
 *.egg-info
+target/
+dbt_packages/
 
 # Virtual environments
 .venv
